@@ -5,12 +5,13 @@
       <el-container>
         <el-aside width="200px">
           <el-menu router>
-              <el-submenu index="1" v-for="(item,index) in this.$router.options.routes" :key="index" v-if="!item.hidden">
+              <el-submenu index="1" v-for="(item,index) in this.$router.options.routes" :key="index" 
+              v-if="!item.hidden">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>{{item.name}}</span>
             </template>
-            <el-menu-item :index="children.path" v-for="(children,indexj) in item.children">{{children.name}}</el-menu-item>
+            <el-menu-item :index="children.path" v-for="(children,indexj) in item.children" :key="indexj">{{children.name}}</el-menu-item>
           </el-submenu>
           </el-menu>
         </el-aside>

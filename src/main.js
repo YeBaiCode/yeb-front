@@ -3,6 +3,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue'
 import router from './router'
+import store from './store'
 // 引入封装请求
 import {postRequest} from './utils/api'
 import {getRequest} from './utils/api'
@@ -23,5 +24,6 @@ Vue.prototype.deleteRequest = deleteRequest;
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
